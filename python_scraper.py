@@ -28,7 +28,7 @@ try:
     )
     latest_release_version = ' '.join(python_download_btn.text.split()[1:])
     print(f'The latest Python release version is: {latest_release_version}')
-    driver.quit()
 except NoSuchElementException as e:
     print('No elements meet the criteria in the desired web page.', e)
+finally:
     driver.quit()
