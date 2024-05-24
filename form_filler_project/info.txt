@@ -1,0 +1,5 @@
+The main purposes of this project are:
+    - Apply what I learnt in Selenium.
+    - Use unittest with Selenium.
+    - Follow the Page Object Model (POM) design pattern.
+ 
