@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get('https://www.thegoldbugs.com/')
-driver.set_page_load_timeout(10)
+driver.maximize_window()
 radio_button_element = driver.find_element(By.CLASS_NAME, 'loj47NF2EW4uatXeLLmw')
 radio_button_element.click()
 if radio_button_element.is_selected():
