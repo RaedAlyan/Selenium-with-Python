@@ -1,9 +1,13 @@
-class TestData:
-    HOME_PAGE_URL = 'https://magento.softwaretestingboard.com/'
-    SIGN_UP_URL = 'https://magento.softwaretestingboard.com/customer/account/create/'
-    SIGN_IN_URL = 'https://magento.softwaretestingboard.com/customer/account/login'
-    MEN_PAGE_URL = 'https://magento.softwaretestingboard.com/men.html'
-    FIRST_NAME = 'Raed'
-    LAST_NAME = 'Eleyan'
-    EMAIL = 'raed12345@gmail.com'
-    PASSWORD = 'raed123!!'
+import configparser
+
+config = configparser.RawConfigParser()
+config.read('./config.ini')
+first_name = config.get('credentials', 'first_name')
+last_name = config.get('credentials', 'last_name')
+email = config.get('credentials', 'email')
+password = config.get('credentials', 'password')
+home_page = config.get('URLs', 'home_page')
+sign_up_page = config.get('URLs', 'sign_up_page')
+sign_in_page = config.get('URLs', 'sign_in_page')
+men_page = config.get('URLs', 'men_page')
+
