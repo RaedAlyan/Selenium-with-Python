@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from luma_website.pages.base_page import BasePage
-from luma_website.configurations.testData import TestData
+import luma_website.configurations.testData as TestData
 
 
 class CreateAccountPage(BasePage):
@@ -19,10 +19,9 @@ class CreateAccountPage(BasePage):
         This method is used to automate creating an account process.
 
         """
-        self.type_text_action(element=self.FIRST_NAME_INPUT, text=TestData.FIRST_NAME)
-        self.type_text_action(element=self.LAST_NAME_INPUT, text=TestData.LAST_NAME)
-        self.type_text_action(element=self.EMAIL_INPUT, text=TestData.EMAIL)
-        self.type_text_action(element=self.PASSWORD_INPUT, text=TestData.PASSWORD)
-        self.type_text_action(element=self.CONFIRM_PASSWORD_INPUT, text=TestData.PASSWORD)
+        self.type_text_action(element=self.FIRST_NAME_INPUT, text=TestData.first_name)
+        self.type_text_action(element=self.LAST_NAME_INPUT, text=TestData.last_name)
+        self.type_text_action(element=self.EMAIL_INPUT, text=TestData.email)
+        self.type_text_action(element=self.PASSWORD_INPUT, text=TestData.password)
+        self.type_text_action(element=self.CONFIRM_PASSWORD_INPUT, text=TestData.password)
         self.click_action(element=self.CREATE_ACCOUNT_BUTTON)
-

@@ -1,5 +1,5 @@
 import time
-from luma_website.configurations.testData import TestData
+import luma_website.configurations.testData as TestData
 from luma_website.pages.login_page import LoginPage
 
 
@@ -7,7 +7,7 @@ class TestLoginPage:
 
     def test_login(self, setup_teardown):
         self.driver = setup_teardown
-        self.driver.get(TestData.SIGN_IN_URL)
+        self.driver.get(TestData.sign_in_page)
         self.driver.maximize_window()
         sign_in_obj = LoginPage(self.driver)
         sign_in_obj.login()
@@ -17,7 +17,7 @@ class TestLoginPage:
 
     def test_login_page_title(self, setup_teardown):
         self.driver = setup_teardown
-        self.driver.get(TestData.SIGN_IN_URL)
+        self.driver.get(TestData.sign_in_page)
         self.driver.maximize_window()
         sign_in_obj = LoginPage(self.driver)
         time.sleep(2)

@@ -1,4 +1,4 @@
-from luma_website.configurations.testData import TestData
+import luma_website.configurations.testData as TestData
 from luma_website.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
@@ -14,6 +14,6 @@ class LoginPage(BasePage):
         super().__init__(driver)
 
     def login(self):
-        self.type_text_action(element=self.EMAIL_INPUT, text=TestData.EMAIL)
-        self.type_text_action(element=self.PASSWORD_INPUT, text=TestData.PASSWORD)
+        self.type_text_action(element=self.EMAIL_INPUT, text=TestData.email)
+        self.type_text_action(element=self.PASSWORD_INPUT, text=TestData.password)
         self.click_action(element=self.SIGN_IN_BUTTON)
